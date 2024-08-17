@@ -1,12 +1,26 @@
-[gd_scene load_steps=4 format=3 uid="uid://t261o2hosg4j"]
-
-[ext_resource type="Script" path="res://scripts/cursor.gd" id="1_y8o5r"]
+[gd_scene load_steps=4 format=3 uid="uid://t828lx1uil3c"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_h15xv"]
 blend_mode = 1
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bji1a"]
 radius = 12.0
+
+[sub_resource type="GDScript" id="GDScript_0v3fm"]
+script/source = "extends ShapeCast2D
+
+@onready var mouse_cursor: ShapeCast2D = $\".\"
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	mouse_cursor.position = get_viewport().get_mouse_position()
+	pass
+"
 
 [node name="Node2D" type="Node2D"]
 
@@ -17,5 +31,5 @@ shape = SubResource("CircleShape2D_bji1a")
 target_position = Vector2(0, 0)
 max_results = 1
 collide_with_areas = true
-script = ExtResource("1_y8o5r")
+script = SubResource("GDScript_0v3fm")
 metadata/is_mouse_cursor = true
