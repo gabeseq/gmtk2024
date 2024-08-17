@@ -1,8 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://cvnwsi84st7j4"]
+[gd_scene load_steps=3 format=3 uid="uid://cvnwsi84st7j4"]
 
 [ext_resource type="PackedScene" uid="uid://cmns73rihteny" path="res://scenes/resizable-tile.tscn" id="1_jl33j"]
+[ext_resource type="PackedScene" uid="uid://deocajuxogumf" path="res://scenes/resizable-tile-2.tscn" id="2_blnqx"]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Tile" parent="." instance=ExtResource("1_jl33j")]
-position = Vector2(516, 300)
+[node name="ResizableTile" parent="." instance=ExtResource("2_blnqx")]
+position = Vector2(231, 243)
+
+[node name="ResizableTile2" parent="." instance=ExtResource("1_jl33j")]
+position = Vector2(624, 240)
+scale = Vector2(0.5, 0.5)

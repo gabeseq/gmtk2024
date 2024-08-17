@@ -2,19 +2,25 @@ extends Polygon2D
 
 @onready var hitbox: CollisionPolygon2D = $Area2D/CollisionPolygon2D
 @onready var tile: Polygon2D = $"."
-@onready var DEFAULT_SCALE = tile.get_parent().scale
+
+const DEFAULT_SCALE = Vector2(1,1)
+const MIN_SCALE = 0.5
+const MAX_SCALE = 1.75
 
 var dragging = false
 var hovering = false
 var tile_offset = 0
 var scale_factor = 1.0
-var MIN_SCALE = 0.5
-var MAX_SCALE = 1.75
+
 var update_scale = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	hitbox.polygon = tile.polygon
+	print(tile.get_parent().scale)
+	tile.scale = DEFAULT_SCALE
+	print(tile.get_parent().scale)
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -22,12 +28,16 @@ func _process(delta: float) -> void:
 
 func _input(event):
 	if hovering and Input.is_action_pressed("ScrollUp"):
+		if scale_factor == MAX_SCALE:
+			pass
 		get_bigger()
-		tile.get_parent().scale = DEFAULT_SCALE * scale_factor
+		tile.scale = DEFAULT_SCALE * scale_factor
 		tile.global_position = event.global_position
 	if hovering and Input.is_action_pressed("ScrollDown"):
+		if scale_factor == MIN_SCALE:
+			pass
 		get_smaller()
-		tile.get_parent().scale = DEFAULT_SCALE * scale_factor
+		tile.scale = DEFAULT_SCALE * scale_factor
 		tile.global_position = event.global_position
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:	
 		if (hovering):
