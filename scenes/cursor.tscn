@@ -18,3 +18,4 @@ target_position = Vector2(0, 0)
 max_results = 1
 collide_with_areas = true
 script = ExtResource("1_y8o5r")
+metadata/is_mouse_cursor = true
