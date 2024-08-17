@@ -1,0 +1,7 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://bp8t0abys1q12"]
+
+[ext_resource type="FontFile" uid="uid://c0boanck3rskr" path="res://assets/Kaph_Font_1_20/TrueType (.ttf)/Kaph-Regular.ttf" id="1_a6sqj"]
+
+[resource]
+font = ExtResource("1_a6sqj")
+font_size = 48
