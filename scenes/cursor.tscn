@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://t261o2hosg4j"]
+
+[ext_resource type="Script" path="res://scripts/cursor.gd" id="1_y8o5r"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_h15xv"]
+blend_mode = 1
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bji1a"]
+radius = 12.0
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ShapeCast2D" type="ShapeCast2D" parent="."]
+top_level = true
+material = SubResource("CanvasItemMaterial_h15xv")
+shape = SubResource("CircleShape2D_bji1a")
+target_position = Vector2(0, 0)
+max_results = 1
+collide_with_areas = true
+script = ExtResource("1_y8o5r")

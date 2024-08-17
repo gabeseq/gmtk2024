@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://cnkjg20g8miub"]
+
+[sub_resource type="GDScript" id="GDScript_adeuq"]
+script/source = "extends CollisionPolygon2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[node name="Resizable-tile" type="Node2D"]
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2(14, 6)
+polygon = PackedVector2Array(2, 2, 11, 55, 66, 85, 143, 78, 111, 36, 33, 7)
+
+[node name="Area2D" type="Area2D" parent="Polygon2D"]
+position = Vector2(24.1687, 28.3598)
+scale = Vector2(9.65178, 9.65178)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Polygon2D/Area2D"]
+position = Vector2(4.43765, 1.10241)
+polygon = PackedVector2Array(-6.6309, -3.72988, -5.80204, 1.55412, 0, 4.66235, 7.87419, 3.9371, 4.66235, -0.310823, -3.72988, -3.31545)
+script = SubResource("GDScript_adeuq")
