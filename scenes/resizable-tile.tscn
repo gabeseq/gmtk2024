@@ -1,9 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://cmns73rihteny"]
+[gd_scene load_steps=4 format=3 uid="uid://cmns73rihteny"]
 
 [ext_resource type="Script" path="res://scripts/tile.gd" id="1_vbvky"]
+[ext_resource type="Shader" path="res://shaders/mask.gdshader" id="1_yf1n1"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_irjnf"]
+shader = ExtResource("1_yf1n1")
 
 [node name="ResizableTile" type="Polygon2D"]
-position = Vector2(14, 3)
+z_index = 1
+material = SubResource("ShaderMaterial_irjnf")
+position = Vector2(701, 206)
 color = Color(0.987667, 0.26, 1, 1)
 antialiased = true
 polygon = PackedVector2Array(-10, 3, 69, 294, 234, 318, 364, 207, 120, 17)

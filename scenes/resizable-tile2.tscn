@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dmm1rxryr50cs"]
+
+[ext_resource type="Script" path="res://scripts/tile.gd" id="1_0846f"]
+[ext_resource type="Shader" path="res://shaders/mask.gdshader" id="1_cs5jg"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7mvmi"]
+shader = ExtResource("1_cs5jg")
+
+[node name="ResizableTile" type="Polygon2D"]
+material = SubResource("ShaderMaterial_7mvmi")
+position = Vector2(16, 78)
+color = Color(0.617342, 0.695866, 0, 1)
+antialiased = true
+polygon = PackedVector2Array(-10, 3, 170, 113, 110, 243, 364, 207, 200, 172, 316, 46)
+script = ExtResource("1_0846f")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

@@ -1,12 +1,31 @@
-[gd_scene load_steps=3 format=3 uid="uid://cvnwsi84st7j4"]
+[gd_scene load_steps=6 format=3 uid="uid://cvnwsi84st7j4"]
 
+[ext_resource type="PackedScene" path="res://scenes/background.tscn" id="1_is7f7"]
 [ext_resource type="PackedScene" uid="uid://cmns73rihteny" path="res://scenes/resizable-tile.tscn" id="1_jl33j"]
-[ext_resource type="PackedScene" uid="uid://t261o2hosg4j" path="res://scenes/cursor.tscn" id="2_se1wb"]
+[ext_resource type="PackedScene" path="res://scenes/foreground.tscn" id="2_r1bw8"]
+[ext_resource type="PackedScene" path="res://scenes/resizable-tile2.tscn" id="3_a7frf"]
+[ext_resource type="PackedScene" path="res://scenes/resizable-tile3.tscn" id="4_k20qh"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Main" type="Node2D"]
 
-[node name="Tile" parent="." instance=ExtResource("1_jl33j")]
-position = Vector2(274, 87)
+[node name="Sprite2D" parent="." instance=ExtResource("1_is7f7")]
+position = Vector2(801, 353)
 
-[node name="Cursor" parent="." instance=ExtResource("2_se1wb")]
-position = Vector2(70, 179)
+[node name="BackBufferCopy" type="BackBufferCopy" parent="."]
+copy_mode = 2
+
+[node name="ResizableTile" parent="BackBufferCopy" instance=ExtResource("1_jl33j")]
+position = Vector2(643, 265)
+
+[node name="ResizableTile2" parent="BackBufferCopy" instance=ExtResource("3_a7frf")]
+z_index = 1
+position = Vector2(137, 244)
+
+[node name="ResizableTile3" parent="BackBufferCopy" instance=ExtResource("4_k20qh")]
+z_index = 1
+position = Vector2(1117, 62)
+
+[node name="ColorRect" parent="BackBufferCopy" instance=ExtResource("2_r1bw8")]
+offset_right = 1404.0
+offset_bottom = 502.0
+mouse_filter = 2

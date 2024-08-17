@@ -22,14 +22,14 @@ func _input(event):
 			# Start dragging if the click is inside the polygon.
 			if not dragging and event.pressed:
 				dragging = true
-				tile_offset = tile.position - event.position
+				tile_offset = tile.global_position - event.global_position
 			# Stop dragging if the button is released.
 			if dragging and not event.pressed:
 				dragging = false
 
 	if event is InputEventMouseMotion and dragging:
 		# While dragging, move the tile with the mouse.
-		tile.position = event.position + tile_offset
+		tile.global_position = event.global_position + tile_offset
 
 func _on_area_2d_mouse_entered() -> void:
 	hovering = true
