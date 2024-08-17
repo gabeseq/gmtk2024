@@ -1,0 +1,60 @@
+[gd_scene load_steps=5 format=3 uid="uid://drdg2ce3jj86w"]
+
+[ext_resource type="LabelSettings" uid="uid://bp8t0abys1q12" path="res://assets/menu_title.tres" id="1_ebgmu"]
+[ext_resource type="LabelSettings" uid="uid://bcd735jo5prxd" path="res://assets/menu_label.tres" id="2_usah4"]
+[ext_resource type="Script" path="res://scenes/play_label.gd" id="3_opbor"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jk34f"]
+size = Vector2(52, 20)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 309.0
+offset_top = 71.0
+offset_right = 798.0
+offset_bottom = 173.0
+text = "GAME"
+label_settings = ExtResource("1_ebgmu")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlayLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 151.0
+offset_top = 263.0
+offset_right = 214.0
+offset_bottom = 289.0
+text = "Play"
+label_settings = ExtResource("2_usah4")
+
+[node name="Area2D" type="Area2D" parent="PlayLabel"]
+script = ExtResource("3_opbor")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayLabel/Area2D"]
+position = Vector2(26, 8)
+shape = SubResource("RectangleShape2D_jk34f")
+
+[node name="QuitLabel" type="Label" parent="."]
+offset_left = 153.0
+offset_top = 312.0
+offset_right = 211.0
+offset_bottom = 336.0
+text = "Quit"
+label_settings = ExtResource("2_usah4")
+
+[node name="Area2D" type="Area2D" parent="QuitLabel"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="QuitLabel/Area2D"]
+position = Vector2(26, 8)
+shape = SubResource("RectangleShape2D_jk34f")
+
+[connection signal="mouse_entered" from="PlayLabel/Area2D" to="PlayLabel/Area2D" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PlayLabel/Area2D" to="PlayLabel/Area2D" method="_on_mouse_exited"]

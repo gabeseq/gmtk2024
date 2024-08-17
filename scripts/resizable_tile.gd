@@ -17,10 +17,7 @@ var update_scale = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	hitbox.polygon = tile.polygon
-	print(tile.get_parent().scale)
 	tile.scale = DEFAULT_SCALE
-	print(tile.get_parent().scale)
-	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -65,10 +62,8 @@ func get_smaller() -> void:
 	scale_factor -= 0.05
 	if scale_factor < MIN_SCALE:
 		scale_factor = MIN_SCALE
-	print(scale_factor)
 	
 func get_bigger() -> void:
 	scale_factor += 0.05
 	if scale_factor > MAX_SCALE:
 		scale_factor = MAX_SCALE
-	print(scale_factor)

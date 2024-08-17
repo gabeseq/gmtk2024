@@ -1,13 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://cvnwsi84st7j4"]
+[gd_scene load_steps=4 format=3 uid="uid://cvnwsi84st7j4"]
 
-[ext_resource type="PackedScene" uid="uid://cmns73rihteny" path="res://scenes/resizable-tile.tscn" id="1_jl33j"]
-[ext_resource type="PackedScene" uid="uid://deocajuxogumf" path="res://scenes/resizable-tile-2.tscn" id="2_blnqx"]
+[ext_resource type="PackedScene" uid="uid://cmns73rihteny" path="res://scenes/resizable_tile.tscn" id="1_jl33j"]
+[ext_resource type="PackedScene" uid="uid://deocajuxogumf" path="res://scenes/resizable_tile_2.tscn" id="2_blnqx"]
+[ext_resource type="PackedScene" uid="uid://bptflemv0ar81" path="res://scenes/snap_point.tscn" id="3_41bcb"]
 
 [node name="Node2D" type="Node2D"]
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 323)
+
 [node name="ResizableTile" parent="." instance=ExtResource("2_blnqx")]
-position = Vector2(339, 282)
+position = Vector2(452, 275)
 
 [node name="ResizableTile2" parent="." instance=ExtResource("1_jl33j")]
-position = Vector2(802, 309)
+position = Vector2(744, 294)
 scale = Vector2(0.5, 0.5)
+
+[node name="SnapPoint" parent="." instance=ExtResource("3_41bcb")]
+position = Vector2(837, 187)

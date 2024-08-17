@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://bptflemv0ar81"]
+
+[node name="SnapPoint" type="Node2D"]
+metadata/is_snap_point = true
