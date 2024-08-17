@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cvnwsi84st7j4"]
 
-[ext_resource type="PackedScene" uid="uid://cmns73rihteny" path="res://scenes/test-tile.tscn" id="1_jl33j"]
+[ext_resource type="PackedScene" uid="uid://cmns73rihteny" path="res://scenes/resizable-tile.tscn" id="1_jl33j"]
 [ext_resource type="PackedScene" uid="uid://t261o2hosg4j" path="res://scenes/cursor.tscn" id="2_se1wb"]
 
 [node name="Node2D" type="Node2D"]

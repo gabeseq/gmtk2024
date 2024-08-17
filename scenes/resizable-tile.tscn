@@ -2,9 +2,10 @@
 
 [ext_resource type="Script" path="res://scripts/tile.gd" id="1_vbvky"]
 
-[node name="TestTile" type="Polygon2D"]
+[node name="ResizableTile" type="Polygon2D"]
 position = Vector2(14, 3)
 color = Color(0.987667, 0.26, 1, 1)
+antialiased = true
 polygon = PackedVector2Array(-10, 3, 69, 294, 234, 318, 364, 207, 120, 17)
 script = ExtResource("1_vbvky")
 
@@ -13,3 +14,4 @@ script = ExtResource("1_vbvky")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
 
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
