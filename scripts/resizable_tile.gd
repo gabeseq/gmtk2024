@@ -16,8 +16,9 @@ var update_scale = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	hitbox.polygon = tile.polygon
 	tile.scale = DEFAULT_SCALE
+	hitbox.polygon = tile.polygon
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

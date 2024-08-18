@@ -1,6 +1,0 @@
-[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://bcd735jo5prxd"]
-
-[ext_resource type="FontFile" uid="uid://c0boanck3rskr" path="res://assets/Kaph_Font_1_20/TrueType (.ttf)/Kaph-Regular.ttf" id="1_330p5"]
-
-[resource]
-font = ExtResource("1_330p5")
