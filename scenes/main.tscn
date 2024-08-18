@@ -7,11 +7,16 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="ResizableTile" parent="." instance=ExtResource("2_blnqx")]
-position = Vector2(452, 275)
+position = Vector2(535, 364)
+metadata/id = 2
 
 [node name="ResizableTile2" parent="." instance=ExtResource("1_jl33j")]
-position = Vector2(744, 294)
+position = Vector2(824, 360)
 scale = Vector2(0.5, 0.5)
+metadata/id = 1
 
-[node name="SnapPoint" parent="." instance=ExtResource("3_41bcb")]
+[node name="SnapPoints" type="Node2D" parent="."]
+
+[node name="SnapPoint1" parent="SnapPoints" instance=ExtResource("3_41bcb")]
 position = Vector2(837, 187)
+metadata/id = 1

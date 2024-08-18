@@ -1,4 +1,7 @@
-[gd_scene format=3 uid="uid://bptflemv0ar81"]
+[gd_scene load_steps=2 format=3 uid="uid://bptflemv0ar81"]
+
+[ext_resource type="Script" path="res://scenes/snap_point.gd" id="1_bbs2u"]
 
 [node name="SnapPoint" type="Node2D"]
+script = ExtResource("1_bbs2u")
 metadata/is_snap_point = true
