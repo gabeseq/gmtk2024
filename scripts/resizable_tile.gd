@@ -2,7 +2,7 @@ extends Polygon2D
 
 @onready var hitbox: CollisionPolygon2D = $Area2D/CollisionPolygon2D
 @onready var tile: Polygon2D = $"."
-@onready var snap_points: Node2D = $"../SnapPoints"
+@onready var snap_points: Node2D = $"../../SnapPoints"
 @onready var INITIAL_SCALE = tile.global_scale
 
 const DEFAULT_SCALE = Vector2(1,1)
@@ -33,7 +33,7 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	hitbox.polygon = tile.polygon
 	hitbox.global_position = tile.global_position
-	if my_snap_point != null and abs(tile.position - my_snap_point.position) < Vector2(32, 32) and tile.scale == INITIAL_SCALE:
+	if my_snap_point != null and abs(tile.position.x - my_snap_point.position.x) < 32 and abs(tile.position.y - my_snap_point.position.y) < 32 and abs(tile.global_scale - INITIAL_SCALE) <= Vector2(2*SCALE_INCREMENT, 2*SCALE_INCREMENT):
 		tile.color = Color(0, 255, 0)
 		is_snapped = true
 	else:
@@ -42,6 +42,7 @@ func _process(_delta: float) -> void:
 	
 	if is_snapped and not dragging:
 		tile.position = my_snap_point.position
+		tile.global_scale = INITIAL_SCALE
 	pass
 	
 func _input(event):
