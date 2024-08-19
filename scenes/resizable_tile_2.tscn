@@ -3,10 +3,10 @@
 [ext_resource type="Script" path="res://scripts/resizable_tile.gd" id="1_y5l1x"]
 
 [node name="ResizableTile" type="Polygon2D"]
-position = Vector2(367.331, 216.564)
+position = Vector2(3, -2)
 color = Color(0.987667, 0.26, 1, 1)
 antialiased = true
-polygon = PackedVector2Array(-140, -133, -103, 75, -137.063, 173.932, 115.531, 175.4, 53, 29, 117, -35, 112.594, -131.531)
+polygon = PackedVector2Array(-21, -20, -20, 25, 19, 26, 20, -22)
 script = ExtResource("1_y5l1x")
 
 [node name="Area2D" type="Area2D" parent="."]
