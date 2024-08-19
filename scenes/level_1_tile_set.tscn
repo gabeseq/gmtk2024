@@ -1,0 +1,87 @@
+[gd_scene load_steps=2 format=3 uid="uid://r64ncraxb4nc"]
+
+[ext_resource type="PackedScene" uid="uid://deocajuxogumf" path="res://scenes/resizable_tile_2.tscn" id="1_vv2dt"]
+
+[node name="ResizableTiles" type="Node2D"]
+
+[node name="ResizableTile1" parent="." instance=ExtResource("1_vv2dt")]
+position = Vector2(1463, 218)
+scale = Vector2(0.65, 0.65)
+polygon = PackedVector2Array(-47.6923, -15.3845, -136.923, 175.385, 115.531, 175.4, 249.231, 110.769, 112.594, -131.531)
+metadata/id = 1
+
+[node name="ResizableTile2" parent="." instance=ExtResource("1_vv2dt")]
+position = Vector2(1412, 762)
+polygon = PackedVector2Array(-54, -40, -54, 160, 4, 36, 108, -39, 47, -98)
+metadata/id = 2
+
+[node name="ResizableTile3" parent="." instance=ExtResource("1_vv2dt")]
+position = Vector2(1340, 548)
+scale = Vector2(1.6, 1.6)
+polygon = PackedVector2Array(-87.5, -19.375, -18.75, 46.875, 101.25, 36.875, -10.625, -113.75)
+metadata/id = 3
+
+[node name="ResizableTile4" parent="." instance=ExtResource("1_vv2dt")]
+position = Vector2(1496, 1006)
+scale = Vector2(0.8, 0.8)
+polygon = PackedVector2Array(-21, -20, -21.25, 42.5, 447.5, -66.25, 206.25, -298.75)
+metadata/id = 4
+
+[node name="ResizableTile5" parent="." instance=ExtResource("1_vv2dt")]
+position = Vector2(135, 784)
+scale = Vector2(1.9, 1.9)
+polygon = PackedVector2Array(-15.2632, -64.2105, -15.7895, -22.6316, -35.7895, 7.36842, -21.579, 77.8947, 56.3158, 46.3158, 18.421, 7.36842, 18.421, -64.7368)
+metadata/id = 5
+
+[node name="ResizableTile6" parent="." instance=ExtResource("1_vv2dt")]
+position = Vector2(154, 291)
+polygon = PackedVector2Array(-113, -44, -30, 36, 51, 47, 41, -3, 79, -60)
+metadata/id = 6
+
+[node name="ResizableTile7" parent="." instance=ExtResource("1_vv2dt")]
+position = Vector2(317, 500)
+scale = Vector2(2, 2)
+polygon = PackedVector2Array(-107, 26, 83.5, 26, 83.5, -224.5)
+metadata/id = 7
+
+[node name="ResizableTile8" parent="." instance=ExtResource("1_vv2dt")]
+position = Vector2(316, 660)
+scale = Vector2(0.7, 0.7)
+polygon = PackedVector2Array(-20, -20, -132.857, 58.5714, -24.2858, 58.5714, 61.4286, -52.8572, -38.5714, -52.8572)
+metadata/id = 8
+
+[node name="ResizableTile9" parent="." instance=ExtResource("1_vv2dt")]
+position = Vector2(1804, 138)
+polygon = PackedVector2Array(-134, -87, -134, 162, 0, 85, 20, -22, -32, -111)
+metadata/id = 9
+
+[node name="ResizableTile10" parent="." instance=ExtResource("1_vv2dt")]
+position = Vector2(1226, 180)
+polygon = PackedVector2Array(-46, -60, -56, -7, -89, 12, -28, 71, 109, 98, 149, -146)
+metadata/id = 10
+
+[node name="ResizableTile11" parent="." instance=ExtResource("1_vv2dt")]
+position = Vector2(366, 986)
+polygon = PackedVector2Array(-99, -67, -30, 55, 38, 54, 101, -28)
+metadata/id = 11
+
+[node name="ResizableTile12" parent="." instance=ExtResource("1_vv2dt")]
+position = Vector2(1660, 641)
+scale = Vector2(1.3, 1.3)
+polygon = PackedVector2Array(-94.6154, -23.8462, -53.8461, 44.6154, -61.5385, 86.1539, 186.923, -23.0769, 178.462, -63.8462, 116.154, -72.3077)
+metadata/id = 12
+
+[node name="ResizableTile13" parent="." instance=ExtResource("1_vv2dt")]
+position = Vector2(412, 787)
+scale = Vector2(0.7, 0.7)
+polygon = PackedVector2Array(-45.7142, -140, -87.1428, 112.857, 2.85718, 130, 78.5714, 30, 68.5714, -122.857)
+metadata/id = 13
+
+[node name="ResizableTile14" parent="." instance=ExtResource("1_vv2dt")]
+position = Vector2(1549, 423)
+scale = Vector2(0.9, 0.9)
+polygon = PackedVector2Array(-104.445, -26.6667, -116.667, 47.7778, -27.7778, 61.1111, -20, 180, 208.889, -121.111, 44.4445, -54.4445, 37.7777, -88.8889)
+metadata/id = 14
+
+[node name="ResizableTile15" parent="." instance=ExtResource("1_vv2dt")]
+position = Vector2(-296, 612)
