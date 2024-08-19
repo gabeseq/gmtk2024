@@ -10,32 +10,30 @@ const MIN_SCALE = 0.5
 const MAX_SCALE = 2.0
 const SCALE_INCREMENT = 0.1
 
+
 var dragging = false
 var hovering = false
 var tile_offset = 0
 var scale_factor = 1.0
 var my_snap_point = null
 var is_snapped = false
-
 var update_scale = false
+var testnode: Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	hitbox.polygon = tile.polygon
 	hitbox.global_position = tile.global_position
-	hitbox.scale = tile.scale
 	tile.global_scale = DEFAULT_SCALE
 	for pt in snap_points.get_children():
 		if pt.get_meta("id") == tile.get_meta("id"):
 			my_snap_point = pt
-			
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	hitbox.polygon = tile.polygon
 	hitbox.global_position = tile.global_position
-	hitbox.scale = tile.scale
-	if my_snap_point != null and abs(tile.position - my_snap_point.position) < Vector2(32, 32) and tile.global_scale == INITIAL_SCALE:
+	if my_snap_point != null and abs(tile.position - my_snap_point.position) < Vector2(32, 32) and tile.scale == INITIAL_SCALE:
 		tile.color = Color(0, 255, 0)
 		is_snapped = true
 	else:
